@@ -1,0 +1,90 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+  }
+  
+  .calculator {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Single column layout */
+    grid-gap: 10px;
+    max-width: 400px;
+    margin: auto;
+    padding: 20px;
+    border: 6px solid #fff;
+    border-radius: 15px;
+    background-color: #e0e0e0;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+  }
+  
+  .display {
+    text-align: right;
+    padding: 30px;
+    font-size: 1.5em;
+    border: 3px solid #fff;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    margin-bottom: 10px;
+  }
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .number-buttons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+  }
+  
+  .operator-buttons {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px;
+  }
+  
+  button {
+    padding: 15px;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #fff;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+  }
+  
+  button:active {
+    transform: scale(0.95);
+  }
+  
+  .clear-btn {
+    background-color: #ff5c5c; /* Operator color for clear button */
+  }
+  
+  .operator-btn {
+    background-color: #ffad33; /* Operator color for other operator buttons */
+  }
+  
+  .equal-btn {
+    background-color: #007bff; /* Operator color for equal button */
+  }
+  
+  .dot-btn {
+    background-color: #ff6666; /* Operator color for dot button */
+  }
+  
+  /* Number keys have the same color */
+  button:not(.clear-btn):not(.operator-btn):not(.equal-btn):not(.dot-btn) {
+    background-color: #4caf50;
+  }
+  
+  button:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+  }
+  
